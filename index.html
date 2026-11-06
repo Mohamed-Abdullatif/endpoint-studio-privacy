@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Privacy policy for the API Tester Chrome extension." />
+<title>API Tester Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Layout: one readable column; a short "at a glance" strip, then the policy as numbered-free sections. */
+  :root {
+    --bg: #f6f5fb;
+    --surface: #ffffff;
+    --fg: #1b1932;
+    --muted: #5f6080;
+    --line: #e4e1f0;
+    --brand: #0369a1;
+    --brand-2: #4f46e5;
+    --brand-3: #7c3aed;
+    --ok: #047857;
+    --ok-bg: #e7f6ef;
+    --display: 'Sora', 'Segoe UI', system-ui, sans-serif;
+    --body: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0b16; --surface: #15152a; --fg: #eeeef8; --muted: #a2a3c2; --line: #2a2a45;
+      --brand: #38bdf8; --brand-2: #818cf8; --brand-3: #a78bfa; --ok: #4ade9f; --ok-bg: #12291f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0b16; --surface: #15152a; --fg: #eeeef8; --muted: #a2a3c2; --line: #2a2a45;
+    --brand: #38bdf8; --brand-2: #818cf8; --brand-3: #a78bfa; --ok: #4ade9f; --ok-bg: #12291f;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 64px;
+  }
+  main { max-width: 720px; margin: 0 auto; display: grid; gap: 40px; }
+
+  header { display: grid; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 12px; font: 700 15px var(--display); letter-spacing: -0.01em; }
+  .mark {
+    width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2) 55%, var(--brand-3));
+  }
+  .mark span { width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+  h1 {
+    margin: 0; font: 700 clamp(30px, 6vw, 44px)/1.1 var(--display); letter-spacing: -0.025em; text-wrap: balance;
+  }
+  .lede { margin: 0; color: var(--muted); max-width: 60ch; }
+  .meta { font: 500 13px var(--mono); color: var(--muted); }
+
+  .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+  .fact {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px;
+    display: grid; gap: 4px; min-width: 0;
+  }
+  .fact b { font: 600 15px var(--display); }
+  .fact small { color: var(--muted); font-size: 15px; line-height: 1.45; }
+  .fact .tick {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--ok-bg); color: var(--ok);
+    display: grid; place-items: center; font-weight: 700; font-size: 13px; margin-bottom: 4px;
+  }
+
+  section { display: grid; gap: 10px; }
+  h2 { margin: 0; font: 600 21px/1.3 var(--display); letter-spacing: -0.01em; text-wrap: balance; }
+  p { margin: 0; max-width: 65ch; }
+  ul { margin: 0; padding-left: 22px; display: grid; gap: 8px; max-width: 65ch; }
+  li::marker { color: var(--brand); }
+  strong { font-weight: 600; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 460px; }
+  th, td { text-align: left; padding: 12px 16px; vertical-align: top; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { font: 600 12px var(--body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  code { font: 500 13px var(--mono); color: var(--brand); white-space: nowrap; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><span class="mark"><span></span></span>API Tester</div>
+    <h1>Privacy Policy</h1>
+    <p class="lede">API Tester is a Chrome extension for building, sending and testing HTTP, GraphQL, WebSocket and Server-Sent Events requests. It works on your device: it has no servers of its own, no accounts and no tracking.</p>
+    <div class="meta">Effective November 6, 2026 · Applies to API Tester 1.0 and later</div>
+  </header>
+
+  <div class="glance" aria-label="At a glance">
+    <div class="fact"><span class="tick" aria-hidden="true">✓</span><b>Nothing is collected</b><small>The developer receives no data from you, ever.</small></div>
+    <div class="fact"><span class="tick" aria-hidden="true">✓</span><b>Stays on your device</b><small>Collections, variables, secrets and history are saved only in your browser.</small></div>
+    <div class="fact"><span class="tick" aria-hidden="true">✓</span><b>You choose every request</b><small>Requests go only to the addresses you enter, when you press Send or Run.</small></div>
+  </div>
+
+  <section>
+    <h2>What API Tester sends, and where</h2>
+    <ul>
+      <li><strong>The requests you build.</strong> When you press Send, run a collection or a script calls <code>pm.sendRequest</code>, API Tester sends that request (its URL, headers, body and authentication) directly from your browser to the server you entered. Nothing passes through any server of ours.</li>
+      <li><strong>OAuth 2.0 sign-in.</strong> If you use OAuth 2.0 authorization, API Tester opens the authorization page you configured and exchanges the code with the token URL you configured. The token is stored on your device.</li>
+      <li><strong>Browser cookies.</strong> Like any request your browser makes, a request may include cookies your browser already holds for that site. API Tester does not read your browser's cookie store.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What API Tester stores</h2>
+    <ul>
+      <li><strong>Collections, requests, environments and variables</strong>, including any secrets and tokens you enter, in your browser's local storage (IndexedDB) on your device.</li>
+      <li><strong>Request history and runner results</strong>, on your device. Secret values are left out of history unless you turn that on in Settings.</li>
+      <li><strong>Preferences</strong> such as language and theme, in Chrome's extension storage on your device.</li>
+    </ul>
+    <p>Exports leave out secrets unless you choose to include them. You can delete history, collections and environments at any time; removing the extension deletes all of its stored data.</p>
+  </section>
+
+  <section>
+    <h2>Permissions and why they are needed</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><code>Access to all sites</code></td><td>Sending your requests to any API you choose without being blocked by the browser's cross-origin (CORS) rules. API Tester does not read or change the pages you browse and injects nothing into them.</td></tr>
+          <tr><td><code>declarativeNetRequestWithHostAccess</code></td><td>Applying headers browsers normally forbid scripts to set (such as Cookie, User-Agent or Referer) to your own request only, for the moment it is sent.</td></tr>
+          <tr><td><code>webRequest</code></td><td>Reading the raw response headers, Set-Cookie headers and redirect steps of requests sent from the API Tester tab, to show them to you. Traffic from other tabs is not observed.</td></tr>
+          <tr><td><code>identity</code></td><td>Opening the OAuth 2.0 sign-in window when you request a token.</td></tr>
+          <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Saving your workspace, history and preferences on your device, including large responses and data files.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>What API Tester does not do</h2>
+    <ul>
+      <li>It does not collect, sell or share personal data, and has no analytics, advertising or tracking.</li>
+      <li>It does not read, record or modify the websites you visit.</li>
+      <li>It does not load code from the internet. Test scripts you write run in an isolated sandbox page inside the extension.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>API Tester does not knowingly collect information from anyone, including children.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published at this address with a new effective date.</p>
+  </section>
+
+  <footer>Questions about this policy? Contact the developer from the Support tab of the API Tester listing on the Chrome Web Store.</footer>
+</main>
+</body>
+</html>
